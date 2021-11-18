@@ -48,8 +48,6 @@
             <file name="org-netbeans-modules-project-ui-NewProject.shadow_hidden"/>
             <file name="org-netbeans-modules-project-ui-OpenProject.shadow_hidden"/>
             <file name="org-netbeans-modules-project-ui-RecentProjects.shadow_hidden"/>
-            <file name="org-netbeans-modules-project-ui-actions-CloseAllProjectsAction.shadow_hidden"/>
-            <file name="org-netbeans-modules-project-ui-actions-CloseOtherProjectsAction.shadow_hidden"/>
             <file name="org-netbeans-modules-project-ui-groups-GroupsMenu.shadow_hidden"/>
             <file name="org-netbeans-modules-options-OptionsWindowAction.shadow">
                 <!--org.netbeans.modules.options.OptionsWindowAction-->
@@ -92,7 +90,6 @@
         </folder>
         <folder name="Window">
             <file name="CloneDocumentAction.shadow_hidden"/>
-            <file name="GroupsMenuAction.shadow_hidden"/>
             <file name="Output_hidden"/>
             <file name="ProgressListAction.shadow_hidden"/>
             <file name="Tools_hidden"/>
@@ -167,5 +164,6 @@
             <file name="org-netbeans-modules-project-ui-NewProject.shadow_hidden"/>
             <file name="org-netbeans-modules-project-ui-OpenProject.shadow_hidden"/>
         </folder>
+        <file name="Memory_hidden"/>
     </folder>
 </filesystem>

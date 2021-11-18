@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: javax.help
+OpenIDE-Module-Localizing-Bundle: javax/help/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

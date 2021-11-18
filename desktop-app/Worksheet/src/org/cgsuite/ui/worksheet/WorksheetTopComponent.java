@@ -6,7 +6,8 @@ package org.cgsuite.ui.worksheet;
 
 import java.awt.Color;
 import java.util.logging.Logger;
-import org.cgsuite.output.Output;
+import javax.swing.SwingUtilities;
+import org.cgsuite.lang.output.Output;
 import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;

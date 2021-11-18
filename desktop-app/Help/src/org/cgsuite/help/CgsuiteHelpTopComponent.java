@@ -5,8 +5,10 @@
 package org.cgsuite.help;
 
 import java.awt.BorderLayout;
+import java.net.URL;
 import java.util.Enumeration;
 import javax.help.HelpSet;
+import javax.help.HelpSetException;
 import javax.help.JHelp;
 import javax.help.JHelpIndexNavigator;
 import javax.help.JHelpNavigator;
@@ -15,7 +17,6 @@ import org.openide.windows.TopComponent;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
-import org.openide.util.Lookup;
 
 /**
  * Top component which displays something.
@@ -38,8 +39,15 @@ public final class CgsuiteHelpTopComponent extends TopComponent {
         initComponents();
         setName(NbBundle.getMessage(CgsuiteHelpTopComponent.class, "CTL_CgsuiteHelpTopComponent"));
         setToolTipText(NbBundle.getMessage(CgsuiteHelpTopComponent.class, "HINT_CgsuiteHelpTopComponent"));
-        HelpSet help = Lookup.getDefault().lookup(HelpSet.class);
+        URL helpUrl = getClass().getResource("docs/help-hs.xml");
+        HelpSet help;
+        try {
+            help = new HelpSet(getClass().getClassLoader(), helpUrl);
+        } catch (HelpSetException exc) {
+            throw new RuntimeException(exc);
+        }
         helpViewer = new JHelp(help);
+        helpViewer.setToolbarDisplayed(false);
         Enumeration e = helpViewer.getHelpNavigators();
         while (e.hasMoreElements())
         {

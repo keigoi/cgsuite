@@ -30,7 +30,6 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -116,7 +115,7 @@ public class HelpBuilder
     
     private void convert(File file, File targetDir, String relPath) throws Exception
     {
-        File targetFile = new File(targetDir, file.getName().replace(".cgsh", ".html"));
+        File targetFile = new File(targetDir, file.getName().replace(".cgsh", ".html").replace(" ", ""));
         
         System.out.println("Converting file: " + file.getName() + " -> " + targetFile);
         
@@ -203,8 +202,7 @@ public class HelpBuilder
         markup = replaceAllSectionHeadings(markup);
         markup = markup.replaceAll("(\n)*##TOC##(\n)*", makeToc(tocItems));
         markup = markup.replaceAll("\n\n", "\n\n<p>");
-        markup = markup.replaceAll("\\[\\[(.*?)\\]\\[(.*?)\\]\\]", "<a href=\"$2.html\">$1</a>");
-        markup = markup.replaceAll("\\[\\[(.*?)\\]\\]", "<a href=\"$1.html\">$1</a>");
+        markup = replaceAllLinks(markup);
         markup = markup.replaceAll("&renderascaret;", "^");
         markup = markup.replaceAll("&renderasquote;", "\"");
         markup = markup.replaceAll("&renderasdollar;", "\\$");
@@ -228,6 +226,22 @@ public class HelpBuilder
         str.append("</ul>\n");
         
         return str.toString();
+    }
+    
+    private static String replaceAllLinks(String input)
+    {
+        Pattern pattern = Pattern.compile("\\[\\[(.*?)\\](\\[(.*?)\\])?\\]");
+        Matcher matcher = pattern.matcher(input);
+        StringBuffer buf = new StringBuffer();
+        while (matcher.find()) {
+            String linkText = matcher.group(1);
+            String group3 = matcher.group(3);
+            String linkDest = (group3 == null ? linkText : group3);
+            String filename = linkDest.replace(" ", "") + ".html";
+            matcher.appendReplacement(buf, "<a href=\"" + filename + "\">" + linkText + "</a>");
+        }
+        matcher.appendTail(buf);
+        return buf.toString();
     }
     
     private static String replaceAllCode(String input)

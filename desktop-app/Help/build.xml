@@ -24,11 +24,12 @@
                 <filtersfile file="${basedir}/../nbproject/project.properties"/>
             </filterset>
         </copy>
+        <echo message="${basedir}"/>
         <!-- Reindex to pick up generated files -->
         <jhindexer basedir="${build.classes.dir}/${cgsuite.docs}/"
                    db="${build.classes.dir}/${cgsuite.docs}/JavaHelpSearch">
             <classpath>
-                <pathelement location="${harness.dir}/antlib/jsearch-2.0_05.jar"/>
+                <pathelement location="${basedir}/../etc/jsearch-2.0_05.jar"/>
                 <pathelement location="${harness.dir}/tasks.jar"/>
             </classpath>
             <include name="**/*.html"/>

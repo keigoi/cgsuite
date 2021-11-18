@@ -6,10 +6,6 @@
     <description>Builds the module suite CGSuite.</description>
     <import file="nbproject/build-impl.xml"/>
     
-    <target name="-init" depends="suite.-init">
-        <copy file="../lib/core/target/cgsuite-core-${app.version}-jar-with-dependencies.jar" tofile="cgsuite-core-lib/release/modules/ext/cgsuite-core.jar"/>
-    </target>
-    
     <target name="branding" depends="-init,-pre-branding" if="run.branding">
         <mkdir dir="${cluster}"/>
         <branding cluster="${cluster}" overrides="${suite.build.dir}/branding-tmp" token="${branding.token}"/>
@@ -34,7 +30,7 @@
     
     <target name="-post-build-launchers">
         <!-- Replace app.exe with custom app.exe with customized icons -->
-        <copy file="${basedir}/etc/app.exe" tofile="${build.launcher.dir}/bin/CGSuite.exe" overwrite="true"/>
+        <!--<copy file="${basedir}/etc/app.exe" tofile="${build.launcher.dir}/bin/CGSuite.exe" overwrite="true"/>-->
         <!-- Set default heap size to 512m, and enable assertions -->
         <replace file="${build.launcher.dir}/etc/${app.name}.conf" token="-J-Xmx64m" value="-J-Xmx512m -J-ea"/>
     </target>
@@ -57,8 +53,6 @@
                 <filtersfile file="${basedir}/nbproject/project.properties"/>
             </filterset>
         </copy>
-        
-        <copy file="${basedir}/../lib/core/target/cgsuite-core-${app.version}-jar-with-dependencies.jar" todir="${cluster}/modules/ext"/>
         
         <!-- Generate svn info -->
         <exec executable="svn" output="${cluster}/svninfo.txt" failifexecutionfails="false">

@@ -5,29 +5,29 @@ and open the template in the editor.
 -->
 <!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN" "http://java.sun.com/products/javahelp/toc_2_0.dtd">
 <toc version="2.0">
- <tocitem text="Combinatorial Game Suite" target="Welcome to CGSuite">
-  <tocitem text="What's New" target="What's New"/>
+ <tocitem text="Combinatorial Game Suite" target="WelcometoCGSuite">
+  <tocitem text="What's New" target="What'sNew"/>
   <tocitem text="License" target="License"/>
   <tocitem text="Tutorials" target="tutorials.Tutorials">
-   <tocitem text="Getting Started" target="tutorials.gettingstarted.Getting Started">
-    <tocitem text="Worksheet Basics" target="tutorials.gettingstarted.Worksheet Basics"/>
-    <tocitem text="Using The Explorer" target="tutorials.gettingstarted.Using The Explorer"/>
+   <tocitem text="Getting Started" target="tutorials.gettingstarted.GettingStarted">
+    <tocitem text="Worksheet Basics" target="tutorials.gettingstarted.WorksheetBasics"/>
+    <tocitem text="Using The Explorer" target="tutorials.gettingstarted.UsingTheExplorer"/>
     <tocitem text="CGScript" target="tutorials.gettingstarted.CGScript"/>
-    <tocitem text="Impartial Games" target="tutorials.gettingstarted.Impartial Games"/>
-    <tocitem text="CGSuite In Action" target="tutorials.gettingstarted.CGSuite In Action"/>
-    <tocitem text="List of Classes" target="tutorials.gettingstarted.List of Classes"/>
+    <tocitem text="Impartial Games" target="tutorials.gettingstarted.ImpartialGames"/>
+    <tocitem text="CGSuite In Action" target="tutorials.gettingstarted.CGSuiteInAction"/>
+    <tocitem text="List of Classes" target="tutorials.gettingstarted.ListofClasses"/>
    </tocitem>
-   <tocitem text="Advanced Features" target="tutorials.advancedfeatures.Advanced Features">
-     <tocitem text="Loopy Games" target="tutorials.advancedfeatures.Loopy Games"/>
+   <tocitem text="Advanced Features" target="tutorials.advancedfeatures.AdvancedFeatures">
+     <tocitem text="Loopy Games" target="tutorials.advancedfeatures.LoopyGames"/>
    </tocitem>
-   <tocitem text="Using CGScript" target="tutorials.usingcgscript.Using CGScript">
-    <tocitem text="Three Examples" target="tutorials.usingcgscript.Three Examples"/>
-    <tocitem text="Classes and Packages" target="tutorials.usingcgscript.Classes and Packages"/>
-    <tocitem text="Control Flow and Scope" target="tutorials.usingcgscript.Control Flow and Scope"/>
-    <tocitem text="Grids and Strips" target="tutorials.usingcgscript.Grids and Strips"/>
-    <tocitem text="Advanced Language Features" target="tutorials.usingcgscript.Advanced Language Features"/>
+   <tocitem text="Using CGScript" target="tutorials.usingcgscript.UsingCGScript">
+    <tocitem text="Three Examples" target="tutorials.usingcgscript.ThreeExamples"/>
+    <tocitem text="Classes and Packages" target="tutorials.usingcgscript.ClassesandPackages"/>
+    <tocitem text="Control Flow and Scope" target="tutorials.usingcgscript.ControlFlowandScope"/>
+    <tocitem text="Grids and Strips" target="tutorials.usingcgscript.GridsandStrips"/>
+    <tocitem text="Advanced Language Features" target="tutorials.usingcgscript.AdvancedLanguageFeatures"/>
    </tocitem>
   </tocitem>
-  <tocitem text="List of References" target="List of References"/>
+  <tocitem text="List of References" target="ListofReferences"/>
  </tocitem>
 </toc>
